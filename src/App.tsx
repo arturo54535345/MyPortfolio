@@ -1,13 +1,12 @@
+import { Navbar } from "./components/layout/Navbar";
 
-import './App.css'
 
 function App() {
-
   return (
-    <div className="text-white">
-      Hola Arturo, el lienzo está listo.
-    </div>
-  )
+    <main className="relative bg-background min-h-screen selection:bg-accent selection:text-white">
+      <Navbar />
+    </main>
+  );
 }
 
-export default App
+export default App;
