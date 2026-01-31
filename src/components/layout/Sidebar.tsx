@@ -3,9 +3,10 @@ import { Github, Linkedin, Mail, Smartphone, ArrowUpRight } from "lucide-react";
 export const Sidebar = () => {
   const navLinks = [
     { name: "Sobre mí", href: "#about" },
+    { name: "Skills", href: "#skills" },
     { name: "Experiencia", href: "#experience" },
     { name: "Proyectos", href: "#projects" },
-    { name: "Skills", href: "#skills" },
+    
   ];
 
   return (

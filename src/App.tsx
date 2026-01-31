@@ -15,6 +15,13 @@ function App() {
         <Intro />
       </section>
 
+      <section id="skills" className="mb-16 md:mb-24 lg:mb-32 scroll-mt-24">
+        <h2 className="mb-8 text-sm font-bold uppercase tracking-widest text-gray-500 hidden lg:block">
+          Skills
+        </h2>
+        <Skills />
+      </section>
+
       {/* 2. EXPERIENCIA (ID="experience") 
           Lista de trabajos con fechas.
       */}
@@ -32,12 +39,7 @@ function App() {
       </section>
 
       {/* 4. SKILLS (ID="skills") */}
-      <section id="skills" className="mb-16 md:mb-24 lg:mb-32 scroll-mt-24">
-        <h2 className="mb-8 text-sm font-bold uppercase tracking-widest text-gray-500 hidden lg:block">
-          Skills
-        </h2>
-        <Skills />
-      </section>
+      
 
       {/* NOTA: He quitado <Contact /> porque tus datos de contacto 
           ya están fijos y visibles todo el tiempo en el Sidebar izquierdo.

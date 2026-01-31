@@ -10,7 +10,7 @@ export const Projects = () => {
           <ProjectCard 
             title={project.title}
             description={project.description}
-            image={project.image}
+            image={project.images[0]} // use the first image from the images array
             technologies={project.technologies}
             link={project.link}
             github={project.github}
