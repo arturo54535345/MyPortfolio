@@ -66,7 +66,7 @@ export const Sidebar = () => {
         <div className="flex flex-col gap-3 text-sm">
           <a href="mailto:tu@email.com" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group">
             <Mail size={16} className="text-gray-600 group-hover:text-teal-400 transition-colors"/>
-            <span>tu-email@ejemplo.com</span>
+            <span>arturomeave.dev@gmail.com</span>
           </a>
           <div className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group">
             <Smartphone size={16} className="text-gray-600 group-hover:text-teal-400 transition-colors"/>
@@ -76,10 +76,10 @@ export const Sidebar = () => {
 
         {/* Redes Sociales (Iconos grandes) */}
         <div className="flex items-center gap-5">
-          <a href="https://github.com/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
+          <a href="https://github.com/arturo54535345" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Github size={20} />
           </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
+          <a href="https://www.linkedin.com/in/arturo-meave/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Linkedin size={20} />
           </a>
           {/* Si el día de mañana añades Twitter o Instagram, pones el icono aquí y no rompe nada */}
