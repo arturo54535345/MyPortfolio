@@ -168,6 +168,9 @@ const Grainient: React.FC<GrainientProps> = ({
     canvas.style.display = 'block';
 
     const container = containerRef.current;
+    
+    // Limpiamos el contenedor antes de añadir el canvas para evitar duplicados en hot-reload
+    container.innerHTML = ''; 
     container.appendChild(canvas);
 
     const geometry = new Triangle(gl);
@@ -230,7 +233,9 @@ const Grainient: React.FC<GrainientProps> = ({
       cancelAnimationFrame(raf);
       ro.disconnect();
       try {
-        container.removeChild(canvas);
+        if (container.contains(canvas)) {
+             container.removeChild(canvas);
+        }
       } catch {
         // Ignore
       }
@@ -260,7 +265,13 @@ const Grainient: React.FC<GrainientProps> = ({
     color3
   ]);
 
-  return <div ref={containerRef} className={`relative h-full w-full overflow-hidden ${className}`.trim()} />;
+  // 🔥 CAMBIO: SOLO DEVOLVEMOS EL DIV CONTENEDOR DEL REF
+  return (
+    <div 
+      ref={containerRef} 
+      className={`relative h-full w-full overflow-hidden ${className}`.trim()} 
+    />
+  );
 };
 
 export default Grainient;

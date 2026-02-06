@@ -4,13 +4,13 @@ import { projects } from "../../data/project";
 
 export const Projects = () => {
   return (
-    <section className="flex flex-col border-t border-white/10">
+    <section className="flex flex-col gap-6">
       {projects.map((project, index) => (
         <FadeIn key={project.id} delay={index * 0.1}>
           <ProjectCard 
             title={project.title}
             description={project.description}
-            image={project.images[0]} // use the first image from the images array
+            image={project.images[0]} 
             technologies={project.technologies}
             link={project.link}
             github={project.github}
