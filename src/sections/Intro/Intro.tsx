@@ -1,17 +1,18 @@
 import { FadeIn } from "../../components/animations/FadeIn";
-import { ArrowRight, Sparkles, Mail, Briefcase } from "lucide-react";
+import { ArrowRight, Mail, Briefcase } from "lucide-react";
 
 export const Intro = () => {
   return (
     <div className="flex flex-col gap-6 pt-10 pb-4">
       
       <FadeIn delay={0.1}>
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-400/10 border border-teal-400/20 w-fit mb-2">
+        {/* 🔥 CAMBIO: Etiqueta en Naranja para que pegue con el magma */}
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 w-fit mb-2">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
             </span>
-            <span className="text-xs font-bold text-teal-400 tracking-wide uppercase">
+            <span className="text-xs font-bold text-orange-500 tracking-wide uppercase">
                 Disponible para proyectos
             </span>
         </div>
@@ -36,18 +37,17 @@ export const Intro = () => {
       <FadeIn delay={0.3}>
         <div className="flex flex-wrap items-center gap-4 mt-4">
           
-          {/* BOTÓN 1: PRINCIPAL (EMAIL DIRECTO) */}
-          {/* CAMBIO AQUÍ: Usamos 'mailto:' */}
+          {/* 🔥 CAMBIO: El botón principal ahora se vuelve naranja al pasar el ratón */}
           <a 
             href="mailto:tu-email@ejemplo.com?subject=Propuesta de Proyecto" 
-            className="group relative flex items-center gap-3 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-black transition-all hover:bg-teal-400 hover:scale-105 active:scale-95"
+            className="group relative flex items-center gap-3 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-black transition-all hover:bg-orange-500 hover:scale-105 active:scale-95"
           >
             <Mail size={18} />
             <span>Hablemos ahora</span>
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </a>
 
-          {/* BOTÓN 2: SECUNDARIO */}
+          {/* BOTÓN SECUNDARIO */}
           <a 
             href="#projects" 
             className="group flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-7 py-3.5 text-sm font-bold text-white transition-all hover:bg-white/10 hover:border-white/30 active:scale-95"

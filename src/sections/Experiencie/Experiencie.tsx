@@ -1,5 +1,4 @@
 import { FadeIn } from "../../components/animations/FadeIn";
-import { Card } from "../../components/ui/Card"; // Asegúrate de tener este componente o usa un div
 
 export const Experience = () => {
   const jobs = [
@@ -9,7 +8,6 @@ export const Experience = () => {
       date: "Dic 19 - Presente",
       description: "Desarrollo de la mayor parte del frontend de una aplicación web full stack con marketplace y blog. Implementé interfaces y estructuras de navegación.",
       stack: ["React", "Node.js", "Express", "MongoDB"],
-      // Pon aquí logos reales o iconos
       logo: "CS" 
     },
     {
@@ -42,7 +40,8 @@ export const Experience = () => {
 
               {/* Contenido */}
               <div>
-                 <h3 className="text-lg font-bold text-white group-hover:text-teal-300 transition-colors">
+                 {/* 🔥 CAMBIO: Hover del título en Naranja */}
+                 <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">
                    {job.role} — {job.company}
                  </h3>
                  <p className="text-sm text-gray-500 mb-4">{job.date}</p>
@@ -50,10 +49,10 @@ export const Experience = () => {
                    {job.description}
                  </p>
                  
-                 {/* Stack Tags */}
+                 {/* 🔥 CAMBIO: Stack tags en naranja */}
                  <div className="flex flex-wrap gap-2">
                    {job.stack.map(tech => (
-                     <span key={tech} className="px-3 py-1 text-xs font-medium text-teal-300 bg-teal-400/10 rounded-full">
+                     <span key={tech} className="px-3 py-1 text-xs font-medium text-orange-300 bg-orange-500/10 rounded-full">
                        {tech}
                      </span>
                    ))}
