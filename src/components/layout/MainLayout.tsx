@@ -1,51 +1,35 @@
 import React from "react";
 import { Sidebar } from "./Sidebar";
 import Grainient from "../backgrounds/Grainient"; 
-import { ThemeToggle } from "../ui/ThemeToggle";
-import { LanguageToggle } from "../ui/LanguageToggle"; // 👈 IMPORTAR
-import { useTheme } from "../../context/ThemeContext";
+import { LanguageToggle } from "../ui/LanguageToggle"; 
 
 interface Props {
   children: React.ReactNode;
 }
 
 export const MainLayout = ({ children }: Props) => {
-  const { theme } = useTheme();
-
-  // 🎨 CONFIGURACIÓN DE COLORES DEL TEMA
-  const magmaConfig = theme === 'dark' 
-    ? { 
-        c1: "#000000", c2: "#ffa629", c3: "#4a1900",
-        opacity: "opacity-40", overlay: "bg-black/60"
-      }
-    : { 
-        c1: "#ffffff", c2: "#ffbd59", c3: "#fff5e6",
-        opacity: "opacity-60", overlay: "bg-white/30"
-      };
-
   return (
-    <div className="relative min-h-screen transition-colors duration-500 bg-slate-50 text-zinc-900 dark:bg-black dark:text-white selection:bg-orange-500/30">
+    <div className="relative min-h-screen bg-black text-white selection:bg-orange-500/30">
       
-      {/* 🔥 ZONA DE BOTONES FLOTANTES (ARRIBA DERECHA) */}
-      <div className="fixed top-6 right-6 z-50 flex items-center gap-3">
+      {/* Botón de Idioma (Fijo arriba a la derecha) */}
+      <div className="fixed top-6 right-6 z-50">
         <LanguageToggle />
-        <ThemeToggle />
       </div>
 
-      {/* --- FONDO DINÁMICO --- */}
-      <div className="fixed inset-0 z-0 pointer-events-none transition-all duration-1000">
+      {/* --- FONDO MAGMA (Siempre activo) --- */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
         <Grainient
-          key={theme}
-          color1={magmaConfig.c1}
-          color2={magmaConfig.c2}
-          color3={magmaConfig.c3}
+          color1="#000000"
+          color2="#ffa629"
+          color3="#4a1900"
           centerX={0.3}
           centerY={0.1}
           zoom={0.8}
           noiseScale={2.5}
-          className={`${magmaConfig.opacity} transition-all duration-1000`}
+          className="opacity-40"
         />
-        <div className={`absolute inset-0 transition-colors duration-1000 ${magmaConfig.overlay}`} />
+        {/* Overlay oscuro para asegurar contraste */}
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       {/* --- CONTENIDO --- */}

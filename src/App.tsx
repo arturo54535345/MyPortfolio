@@ -4,11 +4,10 @@ import { Experience } from "./sections/Experiencie/Experiencie";
 import { Projects } from "./sections/Projects/Projects";
 import { Skills } from "./sections/Skills/Skills";
 import { Contact } from "./sections/Contact/Contact"; 
-import { ThemeProvider } from "./context/ThemeContext";
+
 
 function App() {
   return (
-    <ThemeProvider>
     <MainLayout>
       {/* 1. INTRODUCCIÓN (ID="about") */}
       <section id="about" className="mb-16 md:mb-24 lg:mb-32 scroll-mt-24">
@@ -42,7 +41,6 @@ function App() {
       </section>
 
     </MainLayout>
-    </ThemeProvider>
   );
 }
 
