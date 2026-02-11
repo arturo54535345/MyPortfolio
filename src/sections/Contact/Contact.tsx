@@ -21,7 +21,6 @@ export const Contact = () => {
         body: new FormData(e.currentTarget),
         headers: { 'Accept': 'application/json' }
       });
-
       if (response.ok) {
         setIsSent(true);
         e.currentTarget.reset();

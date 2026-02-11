@@ -58,7 +58,6 @@ export const Skills = () => {
 
   return (
     <section id="skills" className="space-y-8">
-      
       <FadeIn>
         <div className="flex flex-col gap-4">
           <h2 className="text-sm font-bold uppercase tracking-widest text-gray-500">
@@ -73,11 +72,9 @@ export const Skills = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {categories.map((category, index) => (
           <FadeIn key={index} delay={index * 0.1}>
-            
             <div className="group h-full min-h-[180px] p-6 flex flex-col gap-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1
               bg-white/[0.02] border-white/5 hover:bg-white/5 hover:border-white/10"
             >
-              
               <div className="flex items-center gap-4">
                 <div className="p-3 rounded-xl bg-orange-500/10 border border-orange-500/20 group-hover:bg-orange-500/20 transition-colors">
                   {category.icon}
@@ -94,10 +91,7 @@ export const Skills = () => {
               ) : (
                 <div className="grid grid-cols-2 gap-3">
                     {category.items.map((item, i) => (
-                    <div 
-                        key={i} 
-                        className="flex items-center gap-3 p-2 rounded-lg transition-colors group/item hover:bg-white/5"
-                    >
+                    <div key={i} className="flex items-center gap-3 p-2 rounded-lg transition-colors group/item hover:bg-white/5">
                         {item.slug && (
                         <img 
                             src={`https://cdn.simpleicons.org/${item.slug}`} 
@@ -113,7 +107,6 @@ export const Skills = () => {
                     ))}
                 </div>
               )}
-
             </div>
           </FadeIn>
         ))}
