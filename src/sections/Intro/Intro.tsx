@@ -1,5 +1,6 @@
 import { FadeIn } from "../../components/animations/FadeIn";
-import { ArrowRight, Mail, Briefcase } from "lucide-react";
+import { TypewriterText } from "../../components/animations/TypewriterText";
+import { ArrowRight, Mail, Briefcase, FileText } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export const Intro = () => {
@@ -19,11 +20,15 @@ export const Intro = () => {
             </span>
         </div>
 
-        <h1 className="text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
-          {t('intro.title_1')} <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">
-            {t('intro.title_2')}
-          </span>
+        <h1 className="text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl leading-[1.1]">
+          <TypewriterText text={t('intro.title_1')} delay={0.2} speed={0.05} />
+          <br />
+          <TypewriterText 
+            text={t('intro.title_2')} 
+            delay={1.2} 
+            speed={0.06} 
+            className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500 pb-4 md:pb-6"
+          />
         </h1>
       </FadeIn>
 
@@ -51,6 +56,14 @@ export const Intro = () => {
           >
             <Briefcase size={18} className="text-gray-400 group-hover:text-white transition-colors" />
             <span>{t('intro.cta_secondary')}</span>
+          </a>
+
+          <a 
+            href="#" 
+            className="group flex items-center gap-3 rounded-full border border-orange-500/20 bg-orange-500/5 px-7 py-3.5 text-sm font-bold text-orange-400 transition-all hover:bg-orange-500/10 hover:border-orange-500/30 hover:text-orange-300 active:scale-95"
+          >
+            <FileText size={18} className="transition-colors" />
+            <span>Ver CV</span>
           </a>
 
         </div>

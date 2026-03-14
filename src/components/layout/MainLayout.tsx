@@ -1,5 +1,6 @@
 import React from "react";
 import { Sidebar } from "./Sidebar";
+import { MobileNav } from "./MobileNav";
 import Grainient from "../backgrounds/Grainient"; 
 import { LanguageToggle } from "../ui/LanguageToggle"; 
 
@@ -34,16 +35,17 @@ export const MainLayout = ({ children }: Props) => {
 
       {/* --- CONTENIDO --- */}
       <div className="relative z-10 min-h-screen px-6 font-sans md:px-12 lg:px-12 lg:py-0">
-        <div className="lg:flex lg:gap-12">
+        <div className="lg:flex lg:gap-12 relative">
           
           <header className="py-12 lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[280px] lg:shrink-0 lg:flex-col lg:justify-between lg:py-24 overflow-y-auto no-scrollbar z-50">
             <Sidebar />
           </header>
 
-          <main className="flex-1 pt-0 pb-12 lg:pt-24 lg:pb-0 min-w-0 w-full lg:max-w-7xl">
+          <main className="flex-1 pt-0 pb-28 lg:pt-24 lg:pb-0 min-w-0 w-full lg:max-w-7xl">
             {children}
           </main>
 
+          <MobileNav />
         </div>
       </div>
     </div>

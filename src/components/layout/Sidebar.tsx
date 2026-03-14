@@ -81,8 +81,8 @@ export const Sidebar = () => {
             </div>
           </div>
           <div className="flex items-center gap-5">
-            <a href="https://github.com/arturo54535345" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors"><Github size={20} /></a>
-            <a href="https://www.linkedin.com/in/arturo-meave/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors"><Linkedin size={20} /></a>
+            <a href="https://github.com/arturo54535345" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-orange-500 transition-colors"><Github size={20} /></a>
+            <a href="https://www.linkedin.com/in/arturo-meave/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-orange-500 transition-colors"><Linkedin size={20} /></a>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Mail, Send, MapPin, Loader2, CheckCircle2 } from "lucide-react";
 import { SectionWrapper } from "../../components/layout/SectionWrapper";
 import { FadeIn } from "../../components/animations/FadeIn";
+import { TypewriterText } from "../../components/animations/TypewriterText";
 import { Button } from "../../components/ui/Button";
 import { Card } from "../../components/ui/Card";
 import { useTranslation } from "react-i18next";
@@ -27,7 +28,7 @@ export const Contact = () => {
       } else {
         alert("Error.");
       }
-    } catch (error) {
+    } catch {
       alert("Error.");
     } finally {
       setIsLoading(false);
@@ -43,9 +44,14 @@ export const Contact = () => {
             <h2 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4">
               {t('contact.label')}
             </h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              {t('contact.title_1')} <br />
-              <span className="text-orange-500">{t('contact.title_2')}</span>
+            <h3 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-[1.2]">
+              <TypewriterText text={t('contact.title_1')} delay={0.2} speed={0.05} /> <br />
+              <TypewriterText 
+                text={t('contact.title_2')} 
+                delay={1.2} 
+                speed={0.05} 
+                className="text-orange-500"
+              />
             </h3>
             <p className="text-gray-400 text-lg leading-relaxed max-w-md">
               {t('contact.desc')}

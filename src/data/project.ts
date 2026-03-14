@@ -3,8 +3,9 @@ import type { Project } from "../types/project";
 export const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Dashboard",
-    description: "Panel de administración completo con gráficos en tiempo real y gestión de inventario.",
+    title: "AI Business Manager",
+    description:
+      "Panel de administración completo con gráficos en tiempo real y gestión de inventario.",
     images: ["/assets/images/projects/dashboard.png"], // imagen representativa del proyecto
     technologies: ["React", "TypeScript", "Tailwind", "Recharts"],
     link: "https://tu-proyecto.com",
@@ -13,9 +14,9 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Task Manager App",
+    title: "SOLe",
     description: "Aplicación de productividad tipo Trello con drag & drop.",
-    images:["/assets/images/projects/tasks.png"],
+    images: ["/assets/images/projects/tasks.png"],
     technologies: ["React", "Zustand", "Framer Motion"],
     link: "https://tu-proyecto.com",
     size: "medium", // Ocupará 1 columna normal
@@ -27,7 +28,7 @@ export const projects: Project[] = [
     images: ["/assets/images/projects/weather.png"],
     technologies: ["TypeScript", "OpenWeatherMap"],
     link: "https://tu-proyecto.com",
-    size: "small", //Ocupa columna pequeña 
+    size: "small", //Ocupa columna pequeña
   },
   {
     id: 4,
@@ -35,6 +36,6 @@ export const projects: Project[] = [
     description: "Mi primer sitio web personal minimalista.",
     images: ["/assets/images/projects/portfolio.png"],
     technologies: ["HTML", "CSS", "JS"],
-    size: "small", 
+    size: "small",
   },
 ];

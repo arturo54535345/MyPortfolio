@@ -2,15 +2,18 @@ import { useState, useEffect } from "react";
 import { Menu, X, Github, Linkedin } from "lucide-react";
 import { cn } from "../../utils/classNames";
 import { Button } from "../ui/Button";
-
-const navLinks = [
-  { name: "Sobre mí", href: "#about" },
-  { name: "Proyectos", href: "#projects" },
-  { name: "Skills", href: "#skills" },
-  { name: "Contacto", href: "#contact" },
-];
+import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
+  const { t } = useTranslation();
+
+  const navLinks = [
+    { name: t("nav.about"), href: "#about" },
+    { name: t("nav.projects"), href: "#projects" },
+    { name: t("nav.skills"), href: "#skills" },
+    { name: t("nav.contact"), href: "#contact" },
+  ];
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -51,10 +54,10 @@ export const Navbar = () => {
           ))}
           
           <div className="flex items-center gap-4 pl-4 border-l border-white/10">
-            <a href="https://github.com/tu-usuario" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://github.com/arturo54535345" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Github size={20} />
             </a>
-             <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
+             <a href="https://www.linkedin.com/in/arturo-meave/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin size={20} />
             </a>
           </div>

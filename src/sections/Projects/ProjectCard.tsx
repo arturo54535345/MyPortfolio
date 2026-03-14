@@ -71,7 +71,7 @@ export const ProjectCard = ({ title, description, image, technologies, link, git
                 initial={{ scale: 0.98, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.1, duration: 0.4 }}
-                className="relative aspect-[2/1] w-full overflow-hidden rounded-xl border border-white/10 shadow-2xl"
+                className="relative h-48 sm:h-64 md:h-72 w-full overflow-hidden rounded-xl border border-white/10 shadow-2xl"
               >
                 <motion.img 
                   src={image} 
