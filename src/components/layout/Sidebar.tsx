@@ -1,4 +1,3 @@
-// Añadimos useState aquí arriba y la 'X' en los iconos de lucide-react
 import { useState } from "react";
 import { Github, Linkedin, Mail, Smartphone, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -7,7 +6,6 @@ import fotoPerfil from "../../assets/foto-perfil.jpg";
 export const Sidebar = () => {
   const { t } = useTranslation();
   
-  // Este es nuestro "interruptor mental". Empieza en 'false' (apagado)
   const [fotoAmpliada, setFotoAmpliada] = useState(false);
 
   const navLinks = [
@@ -19,11 +17,9 @@ export const Sidebar = () => {
   ];
 
   return (
-    // Agregamos Fragment (<>) para poder poner la ventana emergente fuera del menú
     <>
       <div className="flex flex-col h-full">
         <div className="flex flex-col gap-6 mb-12">
-          {/* Añadimos 'cursor-pointer' para que el ratón cambie a una manita y onClick para encender el interruptor */}
           <div 
             className="h-28 w-28 rounded-full overflow-hidden border-2 border-white/10 bg-white/5 shadow-2xl shrink-0 cursor-pointer"
             onClick={() => setFotoAmpliada(true)}
@@ -87,19 +83,15 @@ export const Sidebar = () => {
         </div>
       </div>
 
-      {/* --- EL TELÓN DE TEATRO (MODAL) --- */}
-      {/* Si fotoAmpliada es 'true', React dibuja esto en pantalla. Si es 'false', no existe. */}
       {fotoAmpliada && (
         <div 
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
           onClick={() => setFotoAmpliada(false)}
         >
-          {/* Contenedor de la foto grande */}
-          <div 
-            className="relative max-w-xl w-full flex justify-center" 
-            onClick={(e) => e.stopPropagation()} 
+          <div
+            className="relative max-w-xl w-full flex justify-center"
+            onClick={(e) => e.stopPropagation()}
           >
-            {/* Botón de la X para cerrar */}
             <button 
               onClick={() => setFotoAmpliada(false)}
               className="absolute -top-12 right-0 md:-right-12 text-white/70 hover:text-white transition-colors"
@@ -107,7 +99,6 @@ export const Sidebar = () => {
               <X size={32} />
             </button>
             
-            {/* La copia gigante de tu foto */}
             <img 
               src={fotoPerfil} 
               alt="Arturo Meave Ampliada" 

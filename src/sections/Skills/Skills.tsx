@@ -75,7 +75,6 @@ export const Skills = () => {
           <FadeIn key={index} delay={index * 0.1}>
             <div className="group h-full p-6 flex flex-col gap-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1 bg-white/[0.02] border-white/5 hover:bg-white/[0.04] hover:border-white/10">
               
-              {/* Header de la tarjeta */}
               <div className="flex items-center gap-4">
                 <div className="p-3 rounded-xl bg-orange-500/10 border border-orange-500/20 text-orange-400 group-hover:bg-orange-500/20 transition-colors">
                   {category.icon}
@@ -85,7 +84,6 @@ export const Skills = () => {
                 </h4>
               </div>
 
-              {/* Grid interior de habilidades */}
               <div className="flex-1">
                 {category.items.length === 0 ? (
                   <div className="flex items-center justify-center h-full opacity-30">

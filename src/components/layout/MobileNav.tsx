@@ -12,7 +12,6 @@ export const MobileNav = () => {
     { id: "contact", icon: <Mail size={20} />, href: "#contact" },
   ];
 
-  // Intersección Observer para resaltar el enlace activo
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -22,7 +21,7 @@ export const MobileNav = () => {
           }
         });
       },
-      { rootMargin: "-30% 0px -70% 0px" } // Detecta la sección cuando está en la mitad superior de la pantalla
+      { rootMargin: "-30% 0px -70% 0px" }
     );
 
     const sections = document.querySelectorAll("section[id]");
@@ -48,7 +47,6 @@ export const MobileNav = () => {
                 {link.icon}
               </div>
               
-              {/* Círculo activo de fondo (opcional, para dar más estilo) */}
               {isActive && (
                 <span className="absolute inset-0 bg-orange-500/10 rounded-full scale-125 transition-all duration-300" />
               )}

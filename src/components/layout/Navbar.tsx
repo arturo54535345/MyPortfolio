@@ -17,7 +17,6 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Detectar scroll para activar el efecto cristal
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -30,9 +29,9 @@ export const Navbar = () => {
     <nav
       className={cn(
         "fixed top-0 z-50 w-full transition-all duration-300 border-b border-transparent",
-        isScrolled 
-          ? "bg-background/80 backdrop-blur-md border-white/10 py-4" // Estado Scrolled (Cristal)
-          : "bg-transparent py-6" // Estado Inicial (Transparente)
+        isScrolled
+          ? "bg-background/80 backdrop-blur-md border-white/10 py-4"
+          : "bg-transparent py-6"
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-12">

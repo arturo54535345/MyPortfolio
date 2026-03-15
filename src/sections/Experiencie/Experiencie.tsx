@@ -34,7 +34,6 @@ export const Experience = () => {
           {jobs.map((job, index) => (
             <div 
               key={index} 
-              // 🔥 TU ESTRUCTURA ORIGINAL RESTAURADA + Estilos Dark Fijos
               className="group relative grid grid-cols-1 md:grid-cols-[auto_1fr] gap-4 p-6 rounded-2xl transition-all duration-300
                 bg-white/[0.02] border border-white/5 
                 hover:bg-white/5 hover:border-white/10"

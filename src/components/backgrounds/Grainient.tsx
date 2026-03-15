@@ -169,7 +169,7 @@ const Grainient: React.FC<GrainientProps> = ({
 
     const container = containerRef.current;
     
-    // Limpiamos el contenedor antes de añadir el canvas para evitar duplicados en hot-reload
+    // clear container before adding canvas to avoid duplicates on hot-reload
     container.innerHTML = ''; 
     container.appendChild(canvas);
 
@@ -265,7 +265,6 @@ const Grainient: React.FC<GrainientProps> = ({
     color3
   ]);
 
-  // 🔥 CAMBIO: SOLO DEVOLVEMOS EL DIV CONTENEDOR DEL REF
   return (
     <div 
       ref={containerRef} 
